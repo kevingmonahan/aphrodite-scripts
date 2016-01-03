@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Running STAR..."
+echo "STAR --genomeDir /seq/mm9/indexes/STAR_indexes/  --runThreadN 20 --readFilesCommand zcat --readFilesIn $1.sickled.SP.R1.fastq.gz $1.sickled.SP.R2.fastq.gz --outFileNamePrefix $1. --outFilterIntronMotifs RemoveNoncanonical --outFilterType BySJout --outFilterMultimapNmax 20 --outSAMtype BAM SortedByCoordinate"   
+STAR --genomeDir /seq/mm9/indexes/STAR_indexes/  --runThreadN 20 --readFilesCommand zcat --readFilesIn $1.sickled.SP.R1.fastq.gz $1.sickled.SP.R2.fastq.gz --outFileNamePrefix $1. --outFilterIntronMotifs RemoveNoncanonical --outFilterType BySJout --outFilterMultimapNmax 20 --outSAMtype BAM SortedByCoordinate   
+echo "STAR --genomeDir /seq/mm9/indexes/STAR_indexes/  --runThreadN 20 --readFilesCommand zcat --readFilesIn $1.sickled.SP.single.fastq.gz  --outFileNamePrefix $1.single. --outFilterIntronMotifs RemoveNoncanonical --outFilterType BySJout --outFilterMultimapNmax 20 --outSAMtype BAM SortedByCoordinate"
+STAR --genomeDir /seq/mm9/indexes/STAR_indexes/  --runThreadN 20 --readFilesCommand zcat --readFilesIn $1.sickled.SP.single.fastq.gz  --outFileNamePrefix $1.single. --outFilterIntronMotifs RemoveNoncanonical --outFilterType BySJout --outFilterMultimapNmax 20 --outSAMtype BAM SortedByCoordinate
