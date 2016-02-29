@@ -12,13 +12,11 @@ computeMatrix reference-point --referencePoint center \
 --afterRegionStartLength $3 \
 --missingDataAsZero \
 --binSize $4 \
+--numberOfProcessors 10 \
 -out matrix.$6.$2.bin-$4.$3.mat
 
 heatmapper --matrixFile matrix.$6.$2.bin-$4.$3.mat \
---sortUsing mean \
---kmeans 2 \
+--sortRegions no \
 --yAxisLabel "coverage" \
---regionsLabel group1,group2 \
---plotTitle $2 --refPointLabel "center" \
---outFileSortedRegions deeptools.$6.$2.bin-$4.size-$3.sort-mean.bed \
---outFileName heatmap.$6.$2.bin-$4.size-$3.sort-mean.k-means-2.pdf
+--plotTitle $2 --refPointLabel "Center" \
+--outFileName heatmap.pre-sort-by-$6.$2.bin-$4.size-$3.sort-mean.pdf

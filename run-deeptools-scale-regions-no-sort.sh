@@ -20,7 +20,5 @@ heatmapper --matrixFile matrix.presort.$6.$2.bin-$5.mat \
 --yAxisLabel "coverage" \
 --regionsLabel $6 \
 --plotTitle $2 --refPointLabel "TSS" \
---yMax 10 \
---zMax 15 \
 --yMin 0 \
 --outFileName heatmap.presortBy.$6.$2.bin-$5.ymax-10.pdf

@@ -19,8 +19,6 @@ computeMatrix scale-regions \
 heatmapper --matrixFile matrix.$7.$2.bin-$5.mat \
 --sortUsing mean \
 --yAxisLabel "coverage" \
---regionsLabel $7 \
---yMin 0 --yMax 1 \
---plotTitle $2 --refPointLabel "TSS" \
+--plotTitle $2 --refPointLabel "START" \
 --outFileSortedRegions deeptools.$7.$2.bin-$5.sort-mean.bed \
 --outFileName heatmap.$7.$2.bin-$5.sort-mean.pdf

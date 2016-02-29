@@ -12,17 +12,17 @@ then
 fi
 if [ "$step" -lt 2 ] 
 then
-    /home/kevin/scripts/chipseq-fastq-preprocess.sh $1
+    /home/kevin/scripts/atac.single-end.preprocess.sh $1
 fi 
 if [ "$step" -lt 3 ] 
 then
-    /home/kevin/scripts/largeFrag-bowtie2.sh $1
+    /home/kevin/scripts/atac.single-end.align.sh $1
 fi
 if [ "$step" -lt 4 ] 
 then
-    /home/kevin/scripts/chipseq-postprocess.sh $1
+    /home/kevin/scripts/atac.single-end.post-align.sh $1
 fi
 if [ "$step" -lt 5 ] 
 then
-	/home/kevin/scripts/chipseq-homer.sh $1
+	/home/kevin/scripts/atac.single-end.homer.sh $1
 fi
